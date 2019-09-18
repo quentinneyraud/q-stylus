@@ -1,0 +1,63 @@
+@require '../breakpoints/index.styl'
+@require './variables.styl'
+@require './mixins.styl'
+
+.container
+  position relative
+  padding-left 15px
+  padding-right 15px
+  margin-right auto
+  margin-left auto
+  width 100%
+  max-width base-width
+
+  +mobile-up()
+    max-width mobile-width
+
+  +tablet-up()
+    max-width tablet-width
+
+  +desktop-up()
+    max-width desktop-width
+
+  +large-up()
+    max-width large-width
+
+  +xlarge-up()
+    max-width xlarge-width
+
+  +xxlarge-up()
+    max-width xxlarge-width
+
+  &.fh
+    height 100%
+
+.row
+  row()
+
+  &.fh
+    height 100%
+
+  &.center
+    justify-content center
+
+  &.start
+    justify-content flex-start
+
+  &.end
+    justify-content flex-end
+
+  &.sb
+    justify-content space-between
+
+  &.v-center
+    align-items center
+
+  &.v-start
+    align-items flex-start
+
+  &.v-end
+    align-items flex-end
+
+.column
+  column()

@@ -1,6 +1,3 @@
-@import './variables'
-@import './easing'
-
 /**
 * Utils
 */
@@ -30,36 +27,6 @@ hidden()
 shown()
   visibility visible
   opacity 1
-
-/**
-* Text
-*/
-
-fsz(value)
-  font-size value px
-
-lh(lh, fsz)
-  line-height floor(lh/fsz, 2)
-
-font(ff = default-ff, fsz = 16, lh = 18, fw = 400, color = text-color, fs = normal)
-  font-family ff
-  fsz(fsz)
-  font-weight fw
-  font-style fs
-  color color
-  lh(lh, fsz)
-
-title()
-  font(default-ff, 40, 42, 700, title-color, normal)
-
-subtitle()
-  font(default-ff, 40, 46, 500, subtitle-color, normal)
-
-text()
-  font(default-ff, 18, 26, 400, text-color, normal)
-
-text-italic()
-  font(default-ff, 16, 20, 400, text-color, italic)
 
 hidden-visually()
   border 0 !important

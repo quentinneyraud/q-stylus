@@ -1,0 +1,14 @@
+fsz(value)
+  font-size value px
+  font-size unit(value/16, 'rem')
+
+lh(lh, fsz)
+  line-height floor(lh/fsz, 2)
+
+font(ff = default-ff, fsz = 16, lh = 18, fw = 400, color = text-color, fs = normal)
+  font-family ff
+  fsz(fsz)
+  font-weight fw
+  font-style fs
+  color color
+  lh(lh, fsz)
