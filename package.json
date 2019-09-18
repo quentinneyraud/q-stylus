@@ -1,0 +1,68 @@
+{
+  "name": "LIBRARY_NAME",
+  "version": "1.0.0",
+  "license": "ISC",
+  "description": "LIBRARY_DESCRIPTION",
+  "keywords": [],
+  "author": {
+    "email": "quentin.neyraud@gmail.com",
+    "name": "Quentin Neyraud"
+  },
+  "maintainers": [
+    {
+      "email": "quentin.neyraud@gmail.com",
+      "name": "Quentin Neyraud"
+    }
+  ],
+  "contributors": [
+    {
+      "email": "quentin.neyraud@gmail.com",
+      "name": "Quentin Neyraud"
+    }
+  ],
+  "homepage": "LIBRARY_DOC_URL",
+  "repository": {
+    "type": "",
+    "url": "LIBRARY_REPO_URL"
+  },
+  "bugs": {
+    "email": "quentin.neyraud@gmail.com",
+    "url": "LIBRARY_REPO_URL/issues"
+  },
+  "main": "umd/LIBRARY_NAME.js",
+  "module": "esm/LIBRARY_NAME.js",
+  "files": [
+    "esm/*",
+    "umd/*",
+    "cjs/*"
+  ],
+  "scripts": {
+    "init": "node tasks/init.js",
+    "build": "rollup --config",
+    "lint": "eslint src/*",
+    "dev": "parcel example/index.html",
+    "docs": "docsify serve ./docs",
+    "prepublish": "npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@qneyraud/eslint-config": "^1.0.3",
+    "docsify-cli": "^4.3.0",
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "parcel-bundler": "^1.12.3",
+    "rollup": "^1.15.6",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.0.0"
+  },
+  "dependencies": {
+    "core-js": "3"
+  }
+}

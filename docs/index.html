@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LIBRARY_TITLE</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="LIBRARY_DESCRIPTION">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      name: 'LIBRARY_TITLE',
+      repo: LIBRARY_REPO_URL
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('click', function(e) {
+      if (e.target.parentNode.closest('.github-corner')) {
+        e.preventDefault()
+        window.open(document.querySelector('.github-corner').href, '_blank')
+      }
+    })
+  </script>
+</body>
+</html>
