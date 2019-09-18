@@ -5,13 +5,13 @@
 ## Install
 
 ```bash
-yarn add q-stylus 
+yarn add @qneyraud/q-stylus
 ```
 
 ## Usage
 
 ```js
-import q-stylus from 'q-stylus'
+import q-stylus from '@qneyraud/q-stylus'
 
 ```
 
