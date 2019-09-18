@@ -1,0 +1,86 @@
+@import './variables'
+@import './easing'
+
+/**
+* Utils
+*/
+
+centered()
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+
+full-parent()
+  position absolute
+  top 0
+  bottom 0
+  right 0
+  left 0
+
+flex-parent-center()
+  display flex
+  justify-content center
+  align-items center
+
+hidden()
+  visibility hidden
+  opacity 0
+
+shown()
+  visibility visible
+  opacity 1
+
+/**
+* Text
+*/
+
+fsz(value)
+  font-size value px
+
+lh(lh, fsz)
+  line-height floor(lh/fsz, 2)
+
+font(ff = default-ff, fsz = 16, lh = 18, fw = 400, color = text-color, fs = normal)
+  font-family ff
+  fsz(fsz)
+  font-weight fw
+  font-style fs
+  color color
+  lh(lh, fsz)
+
+title()
+  font(default-ff, 40, 42, 700, title-color, normal)
+
+subtitle()
+  font(default-ff, 40, 46, 500, subtitle-color, normal)
+
+text()
+  font(default-ff, 18, 26, 400, text-color, normal)
+
+text-italic()
+  font(default-ff, 16, 20, 400, text-color, italic)
+
+hidden-visually()
+  border 0 !important
+  clip rect(1px, 1px, 1px, 1px) !important
+  height 1px !important
+  overflow hidden !important
+  padding 0 !important
+  position absolute !important
+  width 1px !important
+
+to(left, top, debug = false)
+  transform-origin left top
+
+  if debug
+    &:after
+      content ''
+      position absolute
+      top top
+      left left
+      width 5px
+      height 5px
+      background-color #f0f
+      border-radius 50%
+      transform translate(-50%, -50%)
