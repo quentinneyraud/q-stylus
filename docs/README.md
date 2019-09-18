@@ -1,17 +1,17 @@
-# LIBRARY_TITLE
+# Q stylus
 
-> LIBRARY_DESCRIPTION
+> Stylus stack with CSS reset, responsive breakpoints, easing, grid and helpers
 
 ## Install
 
 ```bash
-yarn add LIBRARY_NAME 
+yarn add q-stylus 
 ```
 
 ## Usage
 
 ```js
-import LIBRARY_NAME from 'LIBRARY_NAME'
+import q-stylus from 'q-stylus'
 
 ```
 
@@ -19,8 +19,8 @@ import LIBRARY_NAME from 'LIBRARY_NAME'
 
 ```
 # clone repo
-git clone LIBRARY_REPO_URL
-cd LIBRARY_NAME
+git clone https://github.com/quentinneyraud/q-stylus
+cd q-stylus
 
 # install dependencies
 yarn

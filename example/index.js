@@ -1,3 +1,3 @@
-import LIBRARY_NAME from '../src/index'
+import q-stylus from '../src/index'
 
-console.log(LIBRARY_NAME)
+console.log(q-stylus)
