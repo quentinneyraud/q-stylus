@@ -1,3 +1,15 @@
+import-font(family, files, weight = 400, style = 'normal')
+  srcValues = ()
+
+  for fileFormat, fileUrl in files
+    append(srcValues, 'url("' + fileUrl + '") format("' + fileFormat + '")')
+
+  @font-face
+    font-family family
+    src unquote(join(", ", srcValues))
+    font-weight weight
+    font-style style
+
 fsz(value)
   font-size value px
   font-size unit(value/16, 'rem')
