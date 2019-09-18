@@ -1,8 +1,8 @@
 {
-  "name": "LIBRARY_NAME",
+  "name": "q-stylus",
   "version": "1.0.0",
   "license": "ISC",
-  "description": "LIBRARY_DESCRIPTION",
+  "description": "Stylus stack with CSS reset, responsive breakpoints, easing, grid and helpers",
   "keywords": [],
   "author": {
     "email": "quentin.neyraud@gmail.com",
@@ -20,49 +20,24 @@
       "name": "Quentin Neyraud"
     }
   ],
-  "homepage": "LIBRARY_DOC_URL",
+  "homepage": "https://quentinneyraud.github.io/q-stylus",
   "repository": {
     "type": "",
-    "url": "LIBRARY_REPO_URL"
+    "url": "https://github.com/quentinneyraud/q-stylus"
   },
   "bugs": {
     "email": "quentin.neyraud@gmail.com",
-    "url": "LIBRARY_REPO_URL/issues"
+    "url": "https://github.com/quentinneyraud/q-stylus/issues"
   },
-  "main": "umd/LIBRARY_NAME.js",
-  "module": "esm/LIBRARY_NAME.js",
-  "files": [
-    "esm/*",
-    "umd/*",
-    "cjs/*"
-  ],
+  "main": "src/index.styl",
   "scripts": {
     "init": "node tasks/init.js",
-    "build": "rollup --config",
-    "lint": "eslint src/*",
     "dev": "parcel example/index.html",
     "docs": "docsify serve ./docs",
-    "prepublish": "npm run lint && npm run build"
+    "prepublish": ""
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "@qneyraud/eslint-config": "^1.0.3",
     "docsify-cli": "^4.3.0",
-    "eslint": "^5.16.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.17.3",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.1.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "parcel-bundler": "^1.12.3",
-    "rollup": "^1.15.6",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^5.0.0"
-  },
-  "dependencies": {
-    "core-js": "3"
+    "parcel-bundler": "^1.12.3"
   }
 }
