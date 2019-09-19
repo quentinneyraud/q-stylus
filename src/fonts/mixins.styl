@@ -15,7 +15,10 @@ fsz(value)
   font-size unit(value/16, 'rem')
 
 lh(lh, fsz)
-  line-height floor(lh/fsz, 2)
+  if lh == 'auto'
+    line-height 1.2
+  else
+    line-height floor(lh/fsz, 2)
 
 font(ff = default-ff, fsz = 16, lh = 18, fw = 400, color = text-color, fs = normal)
   font-family ff
