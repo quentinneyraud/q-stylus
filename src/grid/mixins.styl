@@ -7,14 +7,12 @@ row()
 
 column()
   position relative
-  width 100%
   min-height 1px
   padding-right gutter-width
   padding-left gutter-width
-  flex 0 0 100%
+  size(columns)
 
 size(size, c = columns)
-  column()
   flex 0 0 percentage(size/c)
   width percentage(size/c)
   max-width percentage(size/c)
