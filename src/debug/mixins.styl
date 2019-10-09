@@ -1,3 +1,11 @@
-debug-image()
+debug-image-alt()
   img:not([alt]), img[alt=""]
+    transform rotate(180deg) !important
+
+debug-links-titles()
+  a:not([title]), a[title=""]
+    transform rotate(180deg) !important
+
+debug-buttons-titles()
+  button:not([title]), button[title=""]
     transform rotate(180deg) !important
