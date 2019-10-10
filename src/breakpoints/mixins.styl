@@ -26,6 +26,30 @@ xxlarge-up()
   @media screen and (min-width: xxlarge-breakpoint)
     {block}
 
+mobile-down()
+  @media screen and (max-width: mobile-breakpoint - 1px)
+    {block}
+
+tablet-down()
+  @media screen and (max-width: tablet-breakpoint - 1px)
+    {block}
+
+desktop-down()
+  @media screen and (max-width: desktop-breakpoint - 1px)
+    {block}
+
+large-down()
+  @media screen and (max-width: large-breakpoint - 1px)
+    {block}
+
+xlarge-down()
+  @media screen and (max-width: xlarge-breakpoint - 1px)
+    {block}
+
+xxlarge-down()
+  @media screen and (max-width: xxlarge-breakpoint - 1px)
+    {block}
+
 /*
   Height
 */
@@ -40,4 +64,16 @@ medium-height-up()
 
 large-height-up()
   @media screen and (min-height: large-height-breakpoint)
+    {block}
+
+small-height-down()
+  @media screen and (max-height: small-height-breakpoint - 1px)
+    {block}
+
+medium-height-down()
+  @media screen and (max-height: medium-height-breakpoint - 1px)
+    {block}
+
+large-height-down()
+  @media screen and (max-height: large-height-breakpoint - 1px)
     {block}
