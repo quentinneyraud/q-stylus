@@ -2,7 +2,7 @@
 @require './variables.styl'
 @require './mixins.styl'
 
-.container
+.l-container
   position relative
   padding-left 30px
   padding-right 30px
@@ -29,35 +29,65 @@
   +xxlarge-up()
     max-width xxlarge-width
 
-  &.fh
+  &.u-fh
     height 100%
 
-.row
+.l-row
   row()
 
-  &.fh
+  &.u-fh
     height 100%
 
-  &.center
-    justify-content center
-
-  &.start
+  &.u-start
     justify-content flex-start
 
-  &.end
+  &.u-end
     justify-content flex-end
 
-  &.sb
+  &.u-center
+    justify-content center
+
+  &.u-sb
     justify-content space-between
 
-  &.v-center
-    align-items center
+  &.u-se
+    justify-content space-evenly
 
-  &.v-start
+  &.u-v-start
     align-items flex-start
 
-  &.v-end
+  &.u-v-end
     align-items flex-end
 
-.column
+  &.u-v-stretch
+    align-items stretch
+
+  &.u-v-center
+    align-items center
+
+.l-column
   column()
+
+  &.u-grow-0
+    flex-grow 0
+
+  &.u-grow-1
+    flex-grow 1
+
+  &.u-shrink-0
+    flex-shrink 0
+
+  &.u-shrink-1
+    flex-shrink 1
+
+  &.u-start
+    align-self flex-start
+
+  &.u-end
+    align-self flex-end
+
+  &.u-center
+    align-self center
+
+  &.u-stretch
+    align-self stretch
