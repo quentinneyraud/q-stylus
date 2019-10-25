@@ -1,11 +1,47 @@
 debug-image-alt()
   img:not([alt]), img[alt=""]
-    transform rotate(180deg) !important
+    display inline-block !important
+    background-color red !important
+    transform rotate(180deg) translateX(200px) !important
 
 debug-links-titles()
   a:not([title]), a[title=""]
+    display inline-block !important
+    background-color red !important
     transform rotate(180deg) !important
 
 debug-buttons-titles()
   button:not([title]), button[title=""]
+    display inline-block !important
+    background-color red !important
     transform rotate(180deg) !important
+
+debug()
+  border 1px solid red
+  background-color rgba(black, 0.1)
+
+  *
+    background-color rgba(black, 0.1)
+
+    *
+      background-color rgba(black, 0.1)
+
+      *
+        background-color rgba(black, 0.1)
+
+        *
+          background-color rgba(black, 0.1)
+
+          *
+            background-color rgba(black, 0.1)
+
+            *
+              background-color rgba(black, 0.1)
+
+              *
+                background-color rgba(black, 0.1)
+
+debug-all()
+  debug-links-titles()
+  debug-buttons-titles()
+  debug-image-alt()
