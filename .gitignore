@@ -6,6 +6,7 @@
 
 .history
 package-lock.json
+dist
 
 
 #################################
