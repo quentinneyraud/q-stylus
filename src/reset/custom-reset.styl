@@ -1,26 +1,136 @@
+// Custom + Bootstrap reboot (https://github.com/twbs/bootstrap/blob/master/scss/_reboot.scss)
+
+/**
 *
+* General
+*
+**/
+
+body
+  font-family default-ff
+  background-color white
+  -webkit-text-size-adjust 100%
+  -webkit-tap-highlight-color rgba($black, 0)
+  font-smooth always
   -moz-osx-font-smoothing grayscale
-
-button
-  outline none
-  cursor pointer
-  background none
-  border none
-  margin 0
-  padding 0
-
-a
-  text-decoration none
-  color #000
+  -webkit-font-smoothing antialiased
+  -webkit-touch-callout none
 
 *, *:after, *:before
   box-sizing border-box
 
+/**
+*
+* Elements
+*
+**/
+
+template
+  display none
+
+main
+  display block
+
+a
+  text-decoration none
+  color inherit
+
+  &:hover
+    text-decoration none
+    color inherit
+
+sub, sup
+  position relative
+  vertical-align baseline
+
 sup
-  vertical-align super
+  top -0.5em
 
 sub
-  vertical-align sub
+  bottom -0.25em
 
-html, body
-  font-variant-ligatures no-common-ligatures
+/**
+*
+* Forms
+*
+**/
+
+input, button, select, optgroup, textarea
+  margin 0
+  font inherit
+
+input, button
+  overflow visible
+  margin 0
+  border 0
+  padding 0
+  display inline-block
+  vertical-align middle
+  white-space normal
+  background none
+  line-height inherit
+  outline none
+  border-radius 0
+
+  &:focus, &:hover
+    outline none
+
+button, input
+  overflow visible
+
+button, select
+  text-transform none
+
+select
+  word-wrap normal
+
+button, [type="button"], [type="reset"], [type="submit"]
+  -webkit-appearance button
+
+  &:not(:disabled)
+    cursor pointer
+
+::-moz-focus-inner
+  padding 0
+  border-style none
+
+input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"]
+  -webkit-appearance textfield
+
+textarea
+  overflow auto
+  resize vertical
+
+fieldset
+  min-width 0
+  padding 0
+  margin 0
+  border 0
+
+legend
+  float left
+  width 100%
+  padding 0
+  margin-bottom $legend-margin-bottom
+  @include font-size($legend-font-size)
+  font-weight $legend-font-weight
+  line-height inherit
+  color inherit
+  white-space normal
+
+progress
+  vertical-align baseline
+
+::-webkit-datetime-edit
+  overflow visible
+  line-height 0
+
+[type="search"]
+  outline-offset -2px
+  -webkit-appearance textfield
+
+::-webkit-search-decoration
+  -webkit-appearance none
+
+::-webkit-color-swatch-wrapper
+  padding 0
