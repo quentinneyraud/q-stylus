@@ -20,10 +20,13 @@ lh(lh, fsz)
   else
     line-height floor(lh/fsz, 2)
 
-font(ff = default-ff, fsz = 16, lh = 18, fw = 400, color = text-color, fs = normal)
+ff(ff = default-ff)
   font-family ff
+
+font(ff = default-ff, fsz = 16, lh = 18, fw = 400, color = text-color, fs = normal)
+  ff(ff)
   fsz(fsz)
   font-weight fw
-  font-style fs
-  color color
   lh(lh, fsz)
+  color color
+  font-style fs
