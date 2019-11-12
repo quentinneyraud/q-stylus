@@ -14,16 +14,28 @@ column()
   size(columns)
 
 size(size, c = columns)
-  flex 0 0 percentage(size/c)
-  flex-basis percentage(size/c)
-  width percentage(size/c)
-  max-width percentage(size/c)
+  if (unit(size) == '%') {
+    percentSize = size
+  } else {
+    percentSize = percentage(size/c)
+  }
+
+  flex 0 0 percentSize
+  flex-basis percentSize
+  width percentSize
+  max-width percentSize
 
 max-size(size, breakpoint = last-breakpoint)
   max-width unit(breakpoint * size / columns, 'px')
 
 push(size, c = columns)
-  margin-left percentage(size/c)
+  if (unit(size) == '%') {
+    percentSize = size
+  } else {
+    percentSize = percentage(size/c)
+  }
+
+  margin-left percentSize
 
 max-push(size, breakpoint = last-breakpoint)
   margin-left unit(breakpoint * size / columns, 'px')
