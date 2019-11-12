@@ -1,13 +1,27 @@
 no-drag()
   -webkit-user-drag none
 
+drag()
+  -webkit-user-drag auto
+
 no-select()
   user-select none
 
+no-select()
+  user-select auto
+
 no-pointer()
   pointer-events none
+
+pointer()
+  pointer-events auto
 
 no-interaction()
   no-drag()
   no-select()
   no-pointer()
+
+interaction()
+  drag()
+  select()
+  pointer()
