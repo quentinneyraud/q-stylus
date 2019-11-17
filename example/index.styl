@@ -1,12 +1,15 @@
+@require '../src/index.styl'
 @require '../src/**/*.styl'
 
-.test
-  position relative
-  width 100px
-  ratio(100, 50)
-  padding-top: 100%
+.box1
+  size(6)
+  height 500px
   background-color red
 
-.inner
-  height 50px
-  width 50px
+.box2
+  height 500px
+  background-color blue
+
+h1
+  +mobile-up()
+    fsz(50)

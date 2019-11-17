@@ -3,51 +3,59 @@
 */
 
 mobile-up()
-  @media screen and (min-width: mobile-breakpoint)
+  +width-up(mobile-breakpoint)
     {block}
 
 tablet-up()
-  @media screen and (min-width: tablet-breakpoint)
+  +width-up(tablet-breakpoint)
     {block}
 
 desktop-up()
-  @media screen and (min-width: desktop-breakpoint)
+  +width-up(desktop-breakpoint)
     {block}
 
 large-up()
-  @media screen and (min-width: large-breakpoint)
+  +width-up(large-breakpoint)
     {block}
 
 xlarge-up()
-  @media screen and (min-width: xlarge-breakpoint)
+  +width-up(xlarge-breakpoint)
     {block}
 
 xxlarge-up()
-  @media screen and (min-width: xxlarge-breakpoint)
+  +width-up(xxlarge-breakpoint)
+    {block}
+
+width-up(size)
+  @media screen and (min-width: size)
     {block}
 
 mobile-down()
-  @media screen and (max-width: mobile-breakpoint - 1px)
+  +width-down(mobile-breakpoint - 1px)
     {block}
 
 tablet-down()
-  @media screen and (max-width: tablet-breakpoint - 1px)
+  +width-down(tablet-breakpoint - 1px)
     {block}
 
 desktop-down()
-  @media screen and (max-width: desktop-breakpoint - 1px)
+  +width-down(desktop-breakpoint - 1px)
     {block}
 
 large-down()
-  @media screen and (max-width: large-breakpoint - 1px)
+  +width-down(large-breakpoint - 1px)
     {block}
 
 xlarge-down()
-  @media screen and (max-width: xlarge-breakpoint - 1px)
+  +width-down(xlarge-breakpoint - 1px)
     {block}
 
 xxlarge-down()
-  @media screen and (max-width: xxlarge-breakpoint - 1px)
+  +width-down(xxlarge-breakpoint - 1px)
+    {block}
+
+width-down(size)
+  @media screen and (max-width: size)
     {block}
 
 /*
@@ -55,25 +63,33 @@ xxlarge-down()
 */
 
 small-height-up()
-  @media screen and (min-height: small-height-breakpoint)
+  +height-up(small-height-breakpoint)
     {block}
 
 medium-height-up()
-  @media screen and (min-height: medium-height-breakpoint)
+  +height-up(medium-height-breakpoint)
     {block}
 
 large-height-up()
-  @media screen and (min-height: large-height-breakpoint)
+  +height-up(large-height-breakpoint)
+    {block}
+
+height-up(size)
+  @media screen and (min-height: size)
     {block}
 
 small-height-down()
-  @media screen and (max-height: small-height-breakpoint - 1px)
+  +height-down(small-height-breakpoint - 1px)
     {block}
 
 medium-height-down()
-  @media screen and (max-height: medium-height-breakpoint - 1px)
+  +height-down(medium-height-breakpoint - 1px)
     {block}
 
 large-height-down()
-  @media screen and (max-height: large-height-breakpoint - 1px)
+  +height-down(large-height-breakpoint - 1px)
+    {block}
+
+height-down(size)
+  @media screen and (max-height: size)
     {block}
