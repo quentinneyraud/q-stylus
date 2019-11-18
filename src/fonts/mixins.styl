@@ -26,10 +26,14 @@ ff(ff = default-ff)
 fw(fw = 400)
   font-weight fw
 
-font(ff = default-ff, fsz = 16, lh = 18, fw = 400, color = text-color, fs = normal)
+lp(lp = 0)
+  letter-spacing lp em
+
+font(ff = default-ff, fsz = 16, lh = 18, fw = 400, color = text-color, lp = 0,  fs = normal)
   ff(ff)
   fsz(fsz)
   fw(fw)
   lh(lh, fsz)
+  lp(lp)
   color color
   font-style fs
