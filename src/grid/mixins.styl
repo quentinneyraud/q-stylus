@@ -13,29 +13,31 @@ column()
   padding-left gutter-width
   size(columns)
 
-size(size, c = columns)
-  if (unit(size) == '%') {
-    percentSize = size
-  } else {
-    percentSize = percentage(size/c)
-  }
+size(value, c = columns)
+  if typeof(value) == 'literal'
+    size = value
+  else if (unit(value) == '%')
+    size = value
+  else if (unit(value) == '')
+    size = percentage(value / c)
 
-  flex 0 0 percentSize
-  flex-basis percentSize
-  width percentSize
-  max-width percentSize
+  flex 0 0 size
+  flex-basis size
+  width size
+  max-width size
 
 max-size(size, breakpoint = last-breakpoint)
   max-width unit(breakpoint * size / columns, 'px')
 
-push(size, c = columns)
-  if (unit(size) == '%') {
-    percentSize = size
-  } else {
-    percentSize = percentage(size/c)
-  }
+push(value, c = columns)
+  if typeof(value) == 'literal'
+    size = value
+  else if (unit(value) == '%')
+    size = value
+  else if (unit(value) == '')
+    size = percentage(value / c)
 
-  margin-left percentSize
+  margin-left size
 
 max-push(size, breakpoint = last-breakpoint)
   margin-left unit(breakpoint * size / columns, 'px')
