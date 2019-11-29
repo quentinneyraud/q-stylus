@@ -2,7 +2,7 @@
 @require './variables.styl'
 @require './mixins.styl'
 
-.l-container
+{scope} .l-container
   position relative
   padding-left 30px
   padding-right 30px
@@ -34,7 +34,7 @@
   &.u-fh
     height 100%
 
-.l-row
+{scope} .l-row
   row()
 
   &.u-fh
@@ -67,7 +67,7 @@
   &.u-v-center
     align-items center
 
-.l-column
+{scope} .l-column
   column()
 
   &.u-grow-0
