@@ -16,7 +16,7 @@ column()
 size(value, c = columns)
   if typeof(value) == 'literal'
     size = value
-  else if (unit(value) == '%')
+  else if (unit(value) == '%' || unit(value) == 'px')
     size = value
   else if (unit(value) == '')
     size = percentage(value / c)
@@ -32,7 +32,7 @@ max-size(size, breakpoint = last-breakpoint)
 push(value, c = columns)
   if typeof(value) == 'literal'
     size = value
-  else if (unit(value) == '%')
+  else if (unit(value) == '%' || unit(value) == 'px')
     size = value
   else if (unit(value) == '')
     size = percentage(value / c)
