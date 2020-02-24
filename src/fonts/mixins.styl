@@ -10,30 +10,30 @@ import-font(family, files, weight = 400, style = 'normal')
     font-weight weight
     font-style style
 
-fsz(value)
-  font-size value px
-  font-size unit(value/16, 'rem')
+fsz(font-size)
+  font-size font-size px
+  font-size unit(font-size/16, 'rem')
 
-lh(lh, fsz)
-  if lh == 'auto'
+lh(line-height, font-size)
+  if line-height == 'auto'
     line-height 1.2
   else
-    line-height floor(lh/fsz, 2)
+    line-height floor(line-height/font-size, 2)
 
 ff(ff = default-ff)
   font-family ff
 
-fw(fw = 400)
-  font-weight fw
+fw(font-weight = 400)
+  font-weight font-weight
 
-lp(lp = 0)
-  letter-spacing lp em
+lp(letter-spacing = 0)
+  letter-spacing letter-spacing em
 
-font(ff = default-ff, fsz = 16, lh = 18, fw = 400, color = text-color, lp = 0,  fs = normal)
-  ff(ff)
-  fsz(fsz)
-  fw(fw)
-  lh(lh, fsz)
-  lp(lp)
+font(font-family = default-ff, font-size = 16, line-height = 18, font-weight = 400, color = text-color, letter-spacing = 0,  fs = normal)
+  ff(font-family)
+  fsz(font-size)
+  fw(font-weight)
+  lh(line-height, font-size)
+  lp(letter-spacing)
   color color
   font-style fs
