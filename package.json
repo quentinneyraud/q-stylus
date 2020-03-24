@@ -1,6 +1,6 @@
 {
   "name": "@qneyraud/q-stylus",
-  "version": "1.5.7",
+  "version": "1.5.8",
   "license": "ISC",
   "description": "Stylus stack with CSS reset, responsive breakpoints, easing, grid and helpers",
   "keywords": [],
