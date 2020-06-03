@@ -6,12 +6,12 @@ scope ?= null
 
 {scope} .l-container
   position relative
-  padding-left 30px
-  padding-right 30px
   margin-right auto
   margin-left auto
   width 100%
   max-width base-width
+  padding-left gutter-width
+  padding-right gutter-width
 
   +mobile-up()
     max-width mobile-width
@@ -21,8 +21,6 @@ scope ?= null
 
   +desktop-up()
     max-width desktop-width
-    padding-left 0
-    padding-right 0
 
   +large-up()
     max-width large-width
