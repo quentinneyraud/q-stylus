@@ -1,4 +1,4 @@
-import-font(family, files, weight = 400, style = 'normal')
+import-font(family, files, weight = 400, style = 'normal', useSwap = false)
   srcValues = ()
 
   for fileFormat, fileUrl in files
@@ -9,6 +9,8 @@ import-font(family, files, weight = 400, style = 'normal')
     src unquote(join(", ", srcValues))
     font-weight weight
     font-style style
+    if useSwap
+      font-display swap
 
 fsz(font-size)
   font-size font-size px
