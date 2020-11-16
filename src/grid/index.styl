@@ -5,31 +5,7 @@
 scope ?= null
 
 {scope} .l-container
-  position relative
-  margin-right auto
-  margin-left auto
-  width 100%
-  max-width base-width
-  padding-left gutter-width
-  padding-right gutter-width
-
-  +mobile-up()
-    max-width mobile-width
-
-  +tablet-up()
-    max-width tablet-width
-
-  +desktop-up()
-    max-width desktop-width
-
-  +large-up()
-    max-width large-width
-
-  +xlarge-up()
-    max-width xlarge-width
-
-  +xxlarge-up()
-    max-width xxlarge-width
+  container()
 
   &.u-fh
     height 100%
