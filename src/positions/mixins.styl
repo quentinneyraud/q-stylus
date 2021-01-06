@@ -18,14 +18,14 @@ flex-parent-center()
   justify-content center
   align-items center
 
-ratio (width, height)
+ratio(width, height)
   &:before
     content ''
     width 1px
     margin-left -1px
     float left
     height 0
-    padding-top unit((height / width) * 100, '%')
+    padding-top percentage((height / width))
 
   &:after
     content ''
