@@ -6,21 +6,22 @@ import-font(family, files, weight = 400, style = 'normal', useSwap = false)
 
   @font-face
     font-family family
-    src unquote(join(", ", srcValues))
+    src unquote(join(', ', srcValues))
     font-weight weight
     font-style style
-    if useSwap
+
+    if (useSwap)
       font-display swap
 
 fsz(font-size)
-  font-size font-size px
-  font-size unit(font-size/16, 'rem')
+  font-size unit(font-size, 'px')
+  font-size unit((font-size / 10), 'rem')
 
-lh(line-height, font-size = 50)
-  if line-height == 'auto'
+lh(line-height, font-size = 16)
+  if (line-height == 'auto')
     line-height 1.2
   else
-    line-height floor(line-height/font-size, 2)
+    line-height floor((line-height / font-size), 2)
 
 ff(ff = default-ff)
   font-family ff
@@ -31,7 +32,7 @@ fw(font-weight = 400)
 lp(letter-spacing = 0)
   letter-spacing letter-spacing em
 
-font(font-family = default-ff, font-size = 16, line-height = 18, font-weight = 400, color = text-color, letter-spacing = 0,  fs = normal)
+font(font-family = default-ff, font-size = 16, line-height = 18, font-weight = 400, color = text-color, letter-spacing = 0, fs = normal)
   ff(font-family)
   fsz(font-size)
   fw(font-weight)
@@ -39,3 +40,8 @@ font(font-family = default-ff, font-size = 16, line-height = 18, font-weight = 4
   lp(letter-spacing)
   color color
   font-style fs
+
+vw-based-fsz(mockup-width = 1440)
+  reset-browser = percentage((10 / 16))
+  vw-based = unit((1000 / mockup-width), 'vw')
+  font-size 'calc((%s + %s - 0px / %s) / 2)' % (reset-browser vw-based mockup-width / 10)
