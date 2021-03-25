@@ -19,7 +19,7 @@ fsz(font-size)
 
 lh(line-height, font-size = 16)
   if (line-height == 'auto')
-    line-height 1.2
+    line-height auto-line-height
   else
     line-height floor((line-height / font-size), 2)
 
