@@ -14,14 +14,37 @@ import-font(family, files, weight = 400, style = 'normal', useSwap = false)
       font-display swap
 
 fsz(font-size)
-  font-size unit(font-size, 'px')
-  font-size unit((font-size / 10), 'rem')
+  if (typeof(font-size) == 'unit' && unit(font-size) == '')
+    font-size unit(font-size, 'px')
+    font-size unit((font-size / 10), 'rem')
+  else
+    font-size font-size
+
+fs(mobileSize, desktopSize)
+  // Get linear equation m * x + b
+  m = ((desktopSize - mobileSize) / (desktopMockupWidth - mobileMockupWidth))
+  b = mobileSize - m * mobileMockupWidth
+
+  if (desktopSize > mobileSize)
+    clampMin = unit(mobileSize * 0.1, 'rem')
+    clampMax = unit(desktopSize * 0.1, 'rem')
+  else
+    clampMin = unit(desktopSize * 0.1, 'rem')
+    clampMax = unit(mobileSize * 0.1, 'rem')
+
+  clamp(
+    clampMin,
+    'calc(%s * 100vw + %srem)' % (round(m, 4) round(b * 0.1, 4)),
+    clampMax
+  )
 
 lh(line-height, font-size = 16)
   if (line-height == 'auto')
-    line-height auto-line-height
+    line-height 1.31
+  else if (typeof(line-height) == 'unit' && unit(line-height) == '' && typeof(font-size) == 'unit' && unit(font-size) == '')
+    line-height round((line-height / font-size), 2)
   else
-    line-height floor((line-height / font-size), 2)
+    line-height line-height
 
 ff(ff = default-ff)
   font-family ff
